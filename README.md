@@ -53,7 +53,7 @@ Deliverable:
 Take a screenshot of your final map (step 28) and name it `screencap_powerplants.png`.
 
 ### 4. Follow the tutorial at http://www.qgistutorials.com/en/docs/3/importing_spreadsheets_csv.html.
-
+Data is no longer available from source. Instead, use this CSV (note it's not a TSV): [https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.csv](https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.csv)
 Deliverable:
 
 Take a screenshot of your QGIS workspace in the final step (step 4) and name it `screencap_csv_map.png`.
