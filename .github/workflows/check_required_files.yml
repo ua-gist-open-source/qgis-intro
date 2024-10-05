@@ -1,0 +1,73 @@
+name: Check for required files
+
+on:
+  push:
+    branches: [ assignment ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check screencap_japan_map.png
+        id: check_1_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "screencap_japan_map.png"
+
+      - name: Required files exist
+        if: steps.check_1_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'screencap_japan_map.png', is missing
+          exit 1
+
+      - name: Check screencap_populated_capitols.png
+        id: check_2_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "screencap_populated_capitols.png"
+
+      - name: Required files exist
+        if: steps.check_2_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'screencap_populated_capitols.png', is missing
+          exit 1
+
+      - name: Check screencap_powerplants.png
+        id: check_3_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "screencap_powerplants.png"
+
+      - name: Required files exist
+        if: steps.check_3_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'screencap_powerplants.png', is missing
+          exit 1
+
+      - name: Check screencap_csv_map.png
+        id: check_4_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "screencap_csv_map.png"
+
+      - name: Required files exist
+        if: steps.check_4_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'screencap_csv_map.png', is missing
+          exit 1
+
+      - name: Check screencap_county_population.png
+        id: check_5_files
+        uses: andstor/file-existence-action@v1
+        with:
+          files: "screencap_county_population.png"
+
+      - name: Required files exist
+        if: steps.check_5_files.outputs.files_exists != 'true'
+        run: |
+          echo Required file, 'screencap_county_population.png', is missing
+          exit 1
+          
+          
